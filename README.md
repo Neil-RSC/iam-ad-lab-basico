@@ -101,7 +101,7 @@ Instalación de Windows 10 en la segunda VM y configuración de red con IP fija 
 | --- | --- |
 | ![fase7-1](docs/capturas/fase07-01-instalacion-windows-cliente.png) | ![fase7-3](docs/capturas/fase07-03-ip-fija-ws01.png) |
 
-#### 🔧 Solución de problemas (parte valiosa del aprendizaje)
+#### Solución de problemas
 
 Al intentar unir WS01 al dominio apareció el error **"An Active Directory Domain Controller (AD DC) for the domain lab.local could not be contacted"**, acompañado de `ping` con "Destination host unreachable" y `nslookup` con timeouts. Esto indicaba que WS01 no alcanzaba al DNS del dominio:
 
@@ -199,7 +199,7 @@ En DC01 se abrió el **Visor de eventos → Registros de Windows → Seguridad**
 
 ---
 
-## 🎓 Aprendizajes clave
+## Aprendizajes clave
 
 - **Gestión de identidades centralizada:** una sola cuenta de dominio permite iniciar sesión en cualquier equipo unido al dominio.
 - **Permisos por grupos, no por usuarios:** se asignan permisos al grupo; al mover o dar de baja a una persona, basta quitarla del grupo para revocar todos sus accesos (principio base de AGDLP).
@@ -209,7 +209,7 @@ En DC01 se abrió el **Visor de eventos → Registros de Windows → Seguridad**
 - **Automatización con PowerShell:** reducir la alta manual de usuarios a un comando elimina errores y ahorra tiempo.
 - **Auditoría:** cada inicio de sesión (exitoso o fallido) queda registrado en el registro de Seguridad — base para detectar accesos sospechosos.
 
-## ✅ Checklist del proyecto
+## Checklist del proyecto
 
 - [x] DC01 instalado y promovido a Controlador de Dominio
 - [x] WS01 unido al dominio (tras solucionar error de conectividad/DNS)
@@ -219,7 +219,7 @@ En DC01 se abrió el **Visor de eventos → Registros de Windows → Seguridad**
 - [x] Script de creación de usuarios funcionando
 - [x] Eventos de seguridad revisados en el Visor de eventos (4624/4625)
 
-## 📂 Estructura del repositorio
+## Estructura del repositorio
 
 ```javascript
 iam-ad-lab-basico/
@@ -232,4 +232,3 @@ iam-ad-lab-basico/
 
 ---
 
-*Proyecto de portafolio — nivel principiante (dificultad 4-5/10).*
